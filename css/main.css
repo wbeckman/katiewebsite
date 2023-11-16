@@ -1,0 +1,42 @@
+
+#background {
+    height:100%;
+    background: repeating-radial-gradient(
+        circle,
+        #fffa70,
+        #fffa70 10px,
+        #465298 10px,
+        #465298 20px
+    );
+}
+
+body, html {height:100%;}
+
+.main-body {
+    background-color: #fffa70;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    align-content: center;
+}
+
+#snowflake-animation {
+    width: 100%;
+    height: 5%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.header {
+    max-width:100%;
+    max-height:100%;
+}
+
+img.subheader {
+    max-width:40%;
+    max-height:40%;
+}
