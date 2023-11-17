@@ -3,19 +3,24 @@
   <head>
     <title>Welcome to katiewebsite</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/christmas.css">
     <script type = "text/javascript" src="js/main.js"></script>
   </head>
   <body>
     <div id="snowflakes" >
     </div>
-    <div id="background">
+    <div class="background">
       <div class="main-body">
+        
         <img src="img/welcome.png" class="header" alt="welcome">
-        <img src="img/christmas_edition.png" class="subheader" alt="christmas edition">
-        <div class="button-div"><button id="snow-button" onclick="buttonClick()">Let it snow</button></div>
+        <div class="candy-cane-container">
+          <img class="candy-cane" src="img/candy_cane.png">
+          <img src="img/christmas_edition.png" class="subheader" alt="christmas edition">
+          <img class="candy-cane" style="margin-left: auto;" src="img/candy_cane_inv.png">
+        </div>
+        <div class="button-div"><button id="snow-button" onclick="snow()">Let it snow</button></div>
+        <div class="button-div"><button id="cane-button" onclick="spinCanes()">Spin the canes</button></div>
       </div>  
-
-
     </div>
   </body>
 </html>

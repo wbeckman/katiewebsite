@@ -2,11 +2,10 @@ var buttonInterval = 0
 
 function htmlToElement(html) {
   var template = document.createElement('template');
-  html = html.trim(); // Never return a text node of whitespace as the result
+  html = html.trim();
   template.innerHTML = html;
   return template.content.firstChild;
 }
-
 
 function addSnowflake() {
   // Add new snowflake to snowflakes div in a random location
@@ -17,7 +16,6 @@ function addSnowflake() {
   if (Math.random() > 0.5) {
     rotation = "rotate-right";
   }
-  console.log(rotation)
   var node = htmlToElement(`<div class=\"snow-wrapper\" style=\"padding-left: ${snowflakeLocation}%\"> <img class=\"snowflake ${rotation}\" src=\"img/snowflake.webp\"></img></div>`)
   elem.appendChild(node)
   const durationString = getComputedStyle(node).animationDuration
@@ -25,28 +23,53 @@ function addSnowflake() {
   setTimeout(function() {
     elem.removeChild(node)
   }, duration);
-}  
-
-function toggleButtonText(buttonText) {
-  const letItSnow = 'Let it snow';
-  const stopTheSnow = 'Stop the snow';
-  if (buttonText === letItSnow){
-    return stopTheSnow
-  }
-  return letItSnow
 }
 
-function buttonClick(){
-  const snowflakeCount = document.getElementById("snowflakes").childElementCount;
-  const buttonText = document.getElementById("snow-button").innerText;
-  document.getElementById("snow-button").innerText = toggleButtonText(buttonText)
+function toggleButtonText(defaultText, alternateText, currentText){
+  if (currentText === defaultText){
+    return alternateText
+  }
+  return defaultText
+}
 
-  // There are snowflakes present - stop snow
-  if (buttonText === 'Stop the snow'){
+function toggleSnowButtonText(buttonText) {
+  const letItSnow = 'Let it snow';
+  const stopTheSnow = 'Stop the snow';
+  return toggleButtonText(letItSnow, stopTheSnow, buttonText)
+}
+
+function toggleCaneButtonText(buttonText) {
+  const spinTheCanes = 'Spin the canes';
+  const stopTheCanes = 'Stop the canes';
+  return toggleButtonText(spinTheCanes, stopTheCanes, buttonText)
+}
+
+function snow(){
+  const snowButton = document.getElementById("snow-button");
+  
+  if (snowButton.innerText === 'Stop the snow'){
     window.clearInterval(buttonInterval);
   }
   else{ //Start snow
-    console.log('starting snow')
     buttonInterval = setInterval(addSnowflake, 100);
   }
+  snowButton.innerText = toggleSnowButtonText(snowButton.innerText);
+}
+
+
+function spinCanes() {
+  const canes =  document.getElementsByClassName("candy-cane")
+  const caneButton = document.getElementById("cane-button");
+  
+  if (caneButton.innerText === 'Spin the canes'){
+    canes[0].classList.add("rotate-left")
+    canes[1].classList.add("rotate-right")
+  }
+  else{
+    canes[0].classList.remove("rotate-left")
+    canes[1].classList.remove("rotate-right")
+  }
+
+  // Toggle button text
+  caneButton.innerText = toggleCaneButtonText(caneButton.innerText);
 }
