@@ -12,7 +12,13 @@ function addSnowflake() {
   // Add new snowflake to snowflakes div in a random location
   const elem = document.getElementById("snowflakes");
   var snowflakeLocation = Math.random() * 100  
-  var node = htmlToElement(`<div class=\"snow-wrapper\" style=\"padding-left: ${snowflakeLocation}%\"> <img class=\"snowflake\" src=\"img/snowflake.webp\"></img></div>`)
+  var rotation = "rotate-left";
+  // Rotate left/right with 50% probability
+  if (Math.random() > 0.5) {
+    rotation = "rotate-right";
+  }
+  console.log(rotation)
+  var node = htmlToElement(`<div class=\"snow-wrapper\" style=\"padding-left: ${snowflakeLocation}%\"> <img class=\"snowflake ${rotation}\" src=\"img/snowflake.webp\"></img></div>`)
   elem.appendChild(node)
   const durationString = getComputedStyle(node).animationDuration
   const duration = parseFloat(durationString.slice(0, -1)) * 1000;
