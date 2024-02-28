@@ -12,21 +12,21 @@ const comicNeue = Comic_Neue({
 export default function Home() {
   return (
     <main>
-      <div className="flex min-h-screen flex-col items-center justify-between py-24  bg-[url('/resources/happy_birthday_candles_with_silver_glitter.gif')]">
+      <div className="flex min-h-screen flex-col items-center justify-between py-24  bg-[url('/katiewebsite/resources/happy_birthday_candles_with_silver_glitter.gif')]">
         <div>
           <div>
             <Image
               className="mx-auto md:w-3/4 w-full px- bg-katie-yellow"
-              src="/resources/welcome.png"
+              src="/katiewebsite/resources/welcome.png"
               alt="Welcome"
-              width={10}
-              height={10}
+              width={1}
+              height={1}
             />
           </div>
           <div>
             <Image
               className="mx-auto mt-4 md:w-1/4 w-1/2 bg-katie-yellow"
-              src="/resources/birthday_edition.png"
+              src="/katiewebsite/resources/birthday_edition.png"
               alt="Birthday edition"
               width={10}
               height={10}
@@ -56,7 +56,10 @@ export default function Home() {
 
           <div className="mt-4">
             <audio id="song" className="block w-full max-w-md mx-auto" controls>
-              <source src="/resources/birthday_bitch.mp3" type="audio/mpeg" />
+              <source
+                src="/katiewebsite/resources/birthday_bitch.mp3"
+                type="audio/mpeg"
+              />
             </audio>
           </div>
         </div>
