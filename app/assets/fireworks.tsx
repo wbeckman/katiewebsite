@@ -55,8 +55,12 @@ export default function Fireworks() {
           <div className={`h-auto md:w-1/6 w-1/2`}>
             {fireworksVisible && (
               <img
+                id={"sdfsafcsdcasd" + Math.random().toString()}
                 className="h-auto w-full"
-                src="/katiewebsite/thaidiner_fireworks.gif"
+                src={`${
+                  "/katiewebsite/thaidiner_fireworks.gif?q=" +
+                  new Date().getTime()
+                }`}
                 alt="fireworks"
               />
             )}
