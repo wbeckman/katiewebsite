@@ -12,13 +12,15 @@ const comicNeue = Comic_Neue({
 export default function Home() {
   return (
     <main>
-      <div className="flex min-h-screen flex-col items-center justify-between py-24  bg-[url('images/happy_birthday_candles_with_silver_glitter.gif')]">
+      <div className="flex min-h-screen flex-col items-center justify-between py-24  bg-[url('/resources/happy_birthday_candles_with_silver_glitter.gif')]">
         <div>
           <div>
             <Image
               className="mx-auto md:w-3/4 w-full px- bg-katie-yellow"
               src="/resources/welcome.png"
               alt="Welcome"
+              width={10}
+              height={10}
             />
           </div>
           <div>
@@ -26,6 +28,8 @@ export default function Home() {
               className="mx-auto mt-4 md:w-1/4 w-1/2 bg-katie-yellow"
               src="/resources/birthday_edition.png"
               alt="Birthday edition"
+              width={10}
+              height={10}
             />
           </div>
           <div className="flex mt-5">
