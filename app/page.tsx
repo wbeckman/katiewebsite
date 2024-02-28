@@ -17,14 +17,14 @@ export default function Home() {
           <div>
             <Image
               className="mx-auto md:w-3/4 w-full px- bg-katie-yellow"
-              src="/katiewebsite/resources/welcome.png"
+              src="/resources/welcome.png"
               alt="Welcome"
             />
           </div>
           <div>
             <Image
               className="mx-auto mt-4 md:w-1/4 w-1/2 bg-katie-yellow"
-              src="/katiewebsite/resources/birthday_edition.png"
+              src="/resources/birthday_edition.png"
               alt="Birthday edition"
             />
           </div>
