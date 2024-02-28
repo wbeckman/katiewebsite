@@ -57,10 +57,7 @@ export default function Fireworks() {
               <img
                 id={"sdfsafcsdcasd" + Math.random().toString()}
                 className="h-auto w-full"
-                src={`${
-                  "/katiewebsite/thaidiner_fireworks.gif?q=" +
-                  new Date().getTime()
-                }`}
+                src={`${"/thaidiner_fireworks.gif?q=" + new Date().getTime()}`}
                 alt="fireworks"
               />
             )}
