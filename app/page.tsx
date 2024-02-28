@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import welcome from "@/app/images/welcome.png";
-import birthdayEdition from "@/app/images/birthday_edition.png";
 import FireworksManager from "./assets/fireworks_manager";
 import { Comic_Neue } from "next/font/google";
 
@@ -19,14 +17,14 @@ export default function Home() {
           <div>
             <Image
               className="mx-auto md:w-3/4 w-full px- bg-katie-yellow"
-              src={welcome}
+              src="/katiewebsite/resources/welcome.png"
               alt="Welcome"
             />
           </div>
           <div>
             <Image
               className="mx-auto mt-4 md:w-1/4 w-1/2 bg-katie-yellow"
-              src={birthdayEdition}
+              src="/katiewebsite/resources/birthday_edition.png"
               alt="Birthday edition"
             />
           </div>
