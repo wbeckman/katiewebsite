@@ -35,9 +35,9 @@ export default function Home() {
               className={`mx-auto text-center max-w-2xl bg-katie-yellow p-5 ${comicNeue.className}`}
             >
               Umm, hi! My name is Katie and this is my place on the
-              internet...... welcome! in case you didn't realize from all the
-              decorations, it's a very special day (my birthday). Plz wish me a
-              happy birthday everyone.... thank you!!!!
+              internet...... welcome! in case you didn&apos;t realize from all
+              the decorations, it&apos;s a very special day (my birthday). Plz
+              wish me a happy birthday everyone.... thank you!!!!
             </p>
           </div>
           <div>
