@@ -56,7 +56,7 @@ export default function Fireworks() {
             {fireworksVisible && (
               <img
                 className="h-auto w-full"
-                src="katiewebsite/resources/thaidiner_fireworks.gif"
+                src="/katiewebsite/thaidiner_fireworks.gif"
                 alt="fireworks"
               />
             )}
