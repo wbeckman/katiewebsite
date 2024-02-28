@@ -13,7 +13,9 @@ const nextConfig = {
    * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
    */
   // basePath: "/katiewebsite",\
-  assetPrefix: "/katiewebsite",
+  // assetPrefix: "/katiewebsite",
+  // assetPrefix: isProd ? 'https://katieweb.site' : undefined,
+  distDir: 'out/katiewebsite',
 
   /**
    * Disable server-based image optimization. Next.js does not support
