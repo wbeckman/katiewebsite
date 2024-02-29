@@ -12,7 +12,6 @@ export default function Fireworks() {
     "h-2/6 w-12",
     "h-3/6 w-12",
     "h-4/6 w-12",
-    "h-5/6 w-12",
   ];
   const xOffsetOptions = [
     "w-1/12 h-12",

@@ -55,7 +55,11 @@ export default function Home() {
           </div>
 
           <div className="mt-4">
-            <audio id="song" className="block w-full max-w-md mx-auto" controls>
+            <audio
+              id="song"
+              className="block md:max-w-md max-w-3/6 mx-auto"
+              controls
+            >
               <source src="/birthday_bitch.mp3" type="audio/mpeg" />
             </audio>
           </div>
