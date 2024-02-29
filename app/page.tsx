@@ -34,7 +34,7 @@ export default function Home() {
           </div>
           <div className="flex mt-5">
             <p
-              className={`mx-auto text-center max-w-2xl bg-katie-yellow p-5 ${comicNeue.className}`}
+              className={`text-black mx-auto text-center max-w-2xl bg-katie-yellow p-5 ${comicNeue.className}`}
             >
               Umm, hi! My name is Katie and this is my place on the
               internet...... welcome! in case you didn&apos;t realize from all
