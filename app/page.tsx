@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <div>
             <p
-              className={`pb-3 mx-auto text-center max-w-2xl bg-katie-yellow ${comicNeue.className}`}
+              className={`text-black pb-3 mx-auto text-center max-w-2xl bg-katie-yellow ${comicNeue.className}`}
             >
               XOXO Katie 😘
             </p>

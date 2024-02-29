@@ -15,7 +15,7 @@ export default function FireworksManager() {
     <div className="mt-5 flex items-center justify-center content-center">
       {fireworksVisible && <Fireworks />}
       <button
-        className={`bg-gray-200 border-2 border-gray-500 rounded-md p-2 ml-2 hover:bg-gray-700 active:bg-gray-600 ${comicNeue.className}`}
+        className={`text-black bg-gray-200 border-2 border-gray-500 rounded-md p-2 ml-2 hover:bg-gray-700 active:bg-gray-600 ${comicNeue.className}`}
         onClick={() => setFireworksVisible(!fireworksVisible)}
       >
         {!fireworksVisible ? "Get this party started" : "Stop the party"}
