@@ -1,58 +1,17 @@
 import React from "react";
-
-// Example side images (adjust paths and quantity as desired)
-const leftSideImages = [
-  "/gold_glitter_cupid.gif",
-  "/valentines_day_2_glitter_hearts_pink.gif",
-];
-const rightSideImages = ["/lips.gif", "/happy_valentines_day.gif"];
-
-// Helper to get random rotation between -25 and 25 degrees
-function getRandomRotation() {
-  return Math.floor(Math.random() * 51) - 25;
-}
+import RandomAudioPlayer from "./RandomAudioPlayer";
 
 export default function App() {
   return (
     <main>
       <div className="relative w-full h-screen">
-        {/* --- Left Column (absolute) --- */}
-        {/* Use narrower width on mobile, wider on md+ screens */}
-        <div className="absolute top-0 left-0 w-[15%] md:w-1/6 h-full flex flex-col items-center justify-evenly p-2">
-          {leftSideImages.map((src, idx) => (
-            <img
-              key={`left-${idx}`}
-              src={src}
-              alt={`Left ${idx}`}
-              style={{ transform: `rotate(${getRandomRotation()}deg)` }}
-              // Responsive size: smaller on mobile, larger on md & lg
-              className="transition-transform duration-300 m-2
-                         max-w-[60px] sm:max-w-[80px] md:max-w-[100px] lg:max-w-[150px]"
-            />
-          ))}
-        </div>
-
-        {/* --- Right Column (absolute) --- */}
-        <div className="absolute top-0 right-0 w-[12%] md:w-1/6 h-full flex flex-col items-center justify-evenly p-2">
-          {rightSideImages.map((src, idx) => (
-            <img
-              key={`right-${idx}`}
-              src={src}
-              alt={`Right ${idx}`}
-              style={{ transform: `rotate(${getRandomRotation()}deg)` }}
-              className="transition-transform duration-300 m-2
-                         max-w-[60px] sm:max-w-[80px] md:max-w-[100px] lg:max-w-[150px]"
-            />
-          ))}
-        </div>
-
         {/* --- Main Content (center) --- */}
-        <div className="flex min-h-screen flex-col items-center justify-between py-24 bg-[url('/cupid_struck.gif')]">
+        <div className="flex min-h-screen flex-col items-center justify-between py-24 bg-[url('/happy_birthday_gif.gif')]">
           <div>
             {/* Welcome Image */}
             <div>
               <img
-                className="mx-auto md:w-3/4 w-full bg-pink-200"
+                className="mx-auto md:w-3/4 w-full bg-katie-yellow"
                 src="/welcome.png"
                 alt="Welcome"
               />
@@ -61,8 +20,8 @@ export default function App() {
             {/* Valentine's Edition Image */}
             <div className="flex">
               <img
-                className="mx-auto mt-4 md:w-1/4 w-1/2 bg-pink-200"
-                src="/valentines_edition.png"
+                className="mx-auto mt-4 md:w-1/4 w-1/2 bg-katie-yellow"
+                src="/birthday_edition.png"
                 alt="Valentine's Edition"
               />
             </div>
@@ -70,45 +29,37 @@ export default function App() {
             {/* Awoogha Image */}
             <div>
               <img
-                className="mx-auto max-w-60 w-full bg-pink-200 mt-4"
-                src="/awoogha1.gif"
-                alt="Awoogha"
+                className="mx-auto max-w-60 w-full bg-katie-yellow mt-4"
+                src="/cake_with_candles.gif"
+                alt="birthday cake"
               />
             </div>
 
             {/* First Text Block */}
             <div className="flex mt-5">
-              <p className="text-black mx-auto text-center max-w-2xl md:w-2xl w-xs bg-pink-200 p-5">
-                Uhhhh... hey katie here... did you know? It's valentine's day...
-                hope you can give that special someone a kiss ;). Or, if you
-                don't have a special someone right now, maybe get an ice cream
-                for yourself.
+              <p className="text-black mx-auto text-center max-w-2xl md:w-2xl w-xs bg-katie-yellow p-5 font-[Comic_neue]">
+                Hi there! katie here. it's my birthday again!! ~keeping this one
+                short~. if u c me wish me a happy birthday!!
               </p>
             </div>
 
             {/* Second Text Block */}
             <div>
-              <p className="text-black mx-auto text-center max-w-2xl md:w-2xl w-xs bg-pink-200 p-2">
+              <p className="text-black mx-auto text-center max-w-2xl md:w-2xl w-xs bg-katie-yellow p-2 font-[Comic_neue]">
                 okay!! signing off! peace and love
               </p>
             </div>
 
             {/* Signature */}
             <div>
-              <p className="text-black pb-3 mx-auto text-center max-w-2xl md:w-2xl w-xs bg-pink-200">
-                XOXO Katie 😘
+              <p className="text-black pb-3 mx-auto text-center max-w-2xl md:w-2xl w-xs bg-katie-yellow font-[Comic_neue]">
+                sincerely, katie
               </p>
             </div>
 
             {/* Audio Element */}
-            <div className="mt-4">
-              <audio
-                id="song"
-                className="block md:max-w-md max-w-3/6 mx-auto"
-                controls
-              >
-                <source src="/awhooga_horn.mp3" type="audio/mpeg" />
-              </audio>
+            <div className="mt-4 block md:max-w-md max-w-3/6 mx-auto">
+              <RandomAudioPlayer />
             </div>
           </div>
         </div>
